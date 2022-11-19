@@ -1,0 +1,56 @@
+<head>
+    <!----- NOt Visible to the website  --->   
+    <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <link href="stylesheets/app.css" rel="stylesheet" />
+
+
+
+    <!---- Scripts -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+
+    <meta charset="UTF-8">
+</head>        
+        
+<body>   
+<%- include ../Partials/Navbar.ejs %>   
+
+<div class="container">
+    <a href="/workout-list/add" class="btn btn-primary" role="button">
+        <i class="btn btn-primary btn-lg;"></i> Add a Workout </a>
+        <br>
+        <br>
+        <table class="table table-dark table-striped-columns table table-hover" >
+            <tr>
+            <th class="text-center col-1">Workout Name</th>
+            <th class="text-center col-1">Sets</th>
+            <th class="text-center col-1">Reps</th>
+            <th class="text-center col-1">Weight (kg)</th>
+            <th class="text-center col-1"></th>
+            <th class="text-center col-1"></th>
+            </tr>
+
+            <% for(let count=0; count<workoutdatabaselist.length; count++) { %>
+                <tr>
+                <td class="text-center col-2"><%=workoutdatabaselist[count].Workout %></td>
+                <td class="text-center col-1"><%=workoutdatabaselist[count].sets %></td>
+                <td class="text-center col-1"><%=workoutdatabaselist[count].reps %></td>
+                <td class="text-center col-1"><%=workoutdatabaselist[count].weight %></td>
+                <td class="text-center col-1"> 
+                    <a href="/workout-list/edit/<%=workoutdatabaselist[count]._id%>" 
+                        class="btn btn-primary"
+                        <i class="fas fa-pencil-alt"></i>Edit</a></td>
+                <td class="text-center col-1"> 
+                    <a href="/workout-list/delete/<%=workoutdatabaselist[count]._id%>" 
+                        class="btn btn-danger"
+                        <i class="fas fa-pencil-alt"></i>delete</a></td>
+                </tr>
+            <% }%>
+      </table>
+
+
+
+</body> 
+<%- include ../Partials/Footer.ejs %>  
+

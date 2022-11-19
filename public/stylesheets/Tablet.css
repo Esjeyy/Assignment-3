@@ -1,0 +1,187 @@
+
+li {
+    box-shadow: 10px;
+    margin: 0px;
+    list-style: none;
+    overflow: hidden;
+    padding: 20px;
+    float: left;
+    display: inline;
+    font-size: 30px;
+    display: block;
+}
+
+#buttons a {
+    text-decoration: none;
+    color: rgb(2, 57, 57);
+}
+
+
+#buttons {
+    overflow: hidden;
+    background-color: #199;
+   
+}
+
+li:hover {
+    animation: ButtonHoverAnimation 1s forwards;
+}
+
+@keyframes ButtonHoverAnimation {
+    100% {
+        background-color: white;
+    }
+    
+}
+
+#navigations {
+    background-color: red;
+    height: 100px;
+    width: auto;    
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    height: 540px;
+    background-color: rgb(138, 180, 184);
+}
+
+#title {
+    height: 150px;
+    color: #199;
+    text-align: center;
+    margin-top: auto;
+    margin: auto;
+    font-size: 50px;
+    background-color: rgb(21, 84, 79);
+}
+
+#Main {
+    background: linear-gradient(to bottom, rgb(8, 55, 57) 0%,rgb(255, 255, 255) 100%);
+}
+
+
+#title:hover {
+    animation: TitleAnimation 1s forwards;
+
+}
+
+
+
+@keyframes TitleAnimation {
+    100% {
+        background-color: aliceblue;
+    }  
+    
+}
+
+
+#cool {
+    align-items: center;
+    margin: auto;
+    width: auto;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+
+
+
+
+#wrapper:hover #cool{
+    animation: expand 1s ;
+    animation-fill-mode: forwards;  
+}    
+
+
+
+#wrapper:hover #Video{
+    animation: video 1s forwards;
+
+}
+
+@keyframes expand{
+    100% {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgb(198, 201, 201) 0%,rgb(255, 255, 255) 100%);
+        transition: 0.3s;        
+    }
+    
+}
+
+@keyframes video{
+    100% {
+        height: auto;
+        width: 960px;
+    }
+}
+
+#Video {
+    margin: auto;
+    height: auto;
+    width: 0px;
+}
+
+
+footer {
+    color: white;
+    height: 60px;
+    background-color: #199;
+    text-align: center;
+}
+
+
+#name {
+    max-width: 300px;
+    display: block;
+    border: 20px #199;
+    margin: auto;
+   
+   
+}
+
+
+
+#email {
+    text-align: center;
+    max-width: 500px;
+    display: block;
+    border: 20px #199;
+    margin: auto;
+ 
+    
+}
+
+#comments {
+    text-align: center;
+    max-width: 500px;
+    display: block;
+    border: 20px #199;
+    margin: auto;
+  ;
+   
+}
+
+#submit {
+    text-align: center;
+    max-width: 300px;
+    display: block;
+    border: 20px #199;
+    margin: auto;   
+}
+
+
+
+
+
+.box {
+    width: 920px;
+    height: 95px;
+    background-color: rgb(166, 166, 166);
+    text-align: center;
+
+}

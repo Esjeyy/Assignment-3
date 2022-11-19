@@ -1,0 +1,51 @@
+<%- include Partials/Navbar.ejs %>
+<!DOCTYPE html>
+<html>
+<head>
+    <!----- NOt Visible to the website  --->   
+    <link rel="stylesheet" href='dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    
+    <link href="stylesheets/Tablet.css" rel="stylesheet" type="text/css" media="only screen and 
+    (min-width:481px) and (max-width:960px)"> 
+    <link href="stylesheets/phone.css" rel="stylesheet" type="text/css" media="only screen 
+    and (max-width:480px)"> 
+    <link href="stylesheets/app.css" rel="stylesheet" type="text/css" media="only screen and 
+    (min-width:960px)">
+
+
+
+    <!---- Scripts -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+
+    
+
+
+    <meta charset="UTF-8">
+</head>
+
+<body >   
+    <div id="wrapper" style="width: 960px; height: 800px;">
+        <div id="">    
+            <div>
+                <% if (title=="Home") { %>
+                    <%- include Partials/homepage.ejs %> 
+                <% } %>
+
+                <% if (title=="Tutorial") { %>
+                    <%- include Partials/tutorial.ejs %> 
+                <% } %>
+
+
+                <% if (title=="contact") { %>
+                    <%- include Partials/contacts.ejs %> 
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include Partials/Footer.ejs %>  
+</html>
+

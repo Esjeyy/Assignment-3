@@ -1,0 +1,74 @@
+<head>
+    <!----- NOt Visible to the website  --->   
+    <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <link href="../../stylesheets/app.css" rel="stylesheet" />
+
+
+
+    <!---- Scripts -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+
+    <meta charset="UTF-8">
+</head>        
+<%- include ../Partials/Navbar.ejs %>   
+
+<div class="container">
+    <div class ="row"> 
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%=title %></h1>
+            <form class = "form" method = "post"> 
+                <div class="form-group">
+                    <label for = "workoutNameTextField"><b>Name of workout</b></label>
+                    <input type = "text" class= "form-control"
+                    id="workoutNameTextField"
+                    placeholder = "Enter the name of the workout"
+                    name ="Workout" 
+                    value="<%=workoutdatabase.Workout %>"
+                    required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "repsNumberTextField"><b>reps</b></label>
+                    <input type = "text" class= "form-control"
+                    id="repsNumberTextField"
+                    placeholder = "Enter the number of reps"
+                    name ="reps" 
+                    value="<%= workoutdatabase.reps %>"
+                    required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "repsNumberTextField"><b>sets</b></label>
+                    <input type = "text" class= "form-control"
+                    id="repsNumberTextField"
+                    placeholder = "Enter the number of sets"
+                    name ="sets"
+                    value="<%= workoutdatabase.sets %>" 
+                    required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "weightTextField"><b>weight</b></label>
+                    <input type = "text" class= "form-control"
+                    id="weightTextField"
+                    placeholder = "Enter the number of weight in kilograms"
+                    name ="weight" 
+                    value="<%= workoutdatabase.weight %>" 
+                    required>
+                </div> 
+                <br>
+                <button class= "btn btn-success" type="submit"> 
+                    <i class="fa-solid fa-floppy-disk"></i> Save
+                </button>
+
+                <a href = "/workout-list" class="btn btn-danger">
+                    <i class="fa-solid fa-xmark"></i> Cancel </a>
+            </form>
+        </div>
+    </div> 
+</div>
+
+
+<%- include ../Partials/Footer.ejs %>  
